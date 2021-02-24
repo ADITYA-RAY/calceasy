@@ -316,14 +316,14 @@
 
         <table>
             <tr class="change2">
-                <td colspan="3" id="imgcontainer"  ><center><img src="round.jpg"id="image" 
+                <td colspan="3" id="imgcontainer"  ><center><img src="round.jpg"id="image1" 
                     style="border: 2px solid green; opacity: 0.7;border-radius: 12px;"></center></td>
             </tr>
             <tr>
                 <td>Quantity</td>
                 <td><input type="number" id="quantity" autocomplete="off" value="1" min="1"></td>
                 <td></td>
-                <td rowspan="4" id="imgcontainer" class="change1"><img src="round.jpg"id="image" 
+                <td rowspan="4" id="imgcontainer" class="change1"><img src="round.jpg"id="image2" 
                     style="border: 2px solid green; opacity: 0.7;border-radius: 12px;"></td>
             </tr>
             <tr>
@@ -496,43 +496,50 @@
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="round.jpg";
+                document.getElementById("image1").src="round.jpg";
+                document.getElementById("image2").src="round.jpg";
             }
             if (shapeValue == 2) {
                 document.getElementById("rowOne").innerHTML = "Width";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="square.jpg";
+                document.getElementById("image1").src="square.jpg";
+                document.getElementById("image2").src="square.jpg";
             }
             if (shapeValue == 3) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="rectangle.jpg";
+                document.getElementById("image1").src="rectangle.jpg";
+                document.getElementById("image2").src="rectangle.jpg";
             }
             if (shapeValue == 4) {
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="hexagonal.jpg";
+                document.getElementById("image1").src="hexagonal.jpg";
+                document.getElementById("image2").src="hexagonal.jpg";
             }
             if (shapeValue == 5) {
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="octagonal.jpg";
+                document.getElementById("image1").src="octagonal.jpg";
+                document.getElementById("image2").src="octagonal.jpg";
             }
             if (shapeValue == 6) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="sheet.jpg";
+                document.getElementById("image1").src="sheet.jpg";
+                document.getElementById("image2").src="sheet.jpg";
             }
             if (shapeValue == 7) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
-                document.getElementById("image").src="plate.jpg";
+                document.getElementById("image1").src="plate.jpg";
+                document.getElementById("image2").src="plate.jpg";
             }
             if (shapeValue == 8) {
                 document.getElementById("rowOne").innerHTML = "Outer Diameter";
