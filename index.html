@@ -295,7 +295,7 @@
             </tr>
             <tr>
                 <td id="rowOne">Diameter </td>
-                <td><input type="number" step="any" id="paraOneInput" autocomplete="off"></td>
+                <td><input type="number" step="any" id="paraOneInput" autocomplete="off" min="1"></td>
                 <td>
                     <select id="unitSelect1">
                         <option id="1">mm</option>
@@ -309,7 +309,7 @@
             </tr>
             <tr>
                 <td id="rowTwo"></td>
-                <td><input input type="number" step="any" id="paraTwoInput" autocomplete="off"></td>
+                <td><input input type="number" step="any" id="paraTwoInput" autocomplete="off" min="1" ></td>
                 <td>
                     <select id="unitSelect2">
                         <option id="1">mm</option>
@@ -323,7 +323,7 @@
             </tr>
             <tr>
                 <td id="rowThree">Length </td>
-                <td><input input type="number" step="any" id="paraThreeInput" autocomplete="off"></td>
+                <td><input input type="number" step="any" id="paraThreeInput" autocomplete="off"min="1"></td>
                 <td>
                     <select id="unitSelect3">
                         <option id="1">mm</option>
@@ -560,11 +560,11 @@
             } else if (shape == "7") {
                 answer = paraOne * paraTwo * paraThree * density * q;
             } else if (shape == "8") {
-                answer = 3.14159 * paraThree * (2 * paraOne * parTwo - paraTwo * paraTwo) * density * q / 4;
+                answer = 3.14159 * paraThree * (2 * paraOne * paraTwo - paraTwo * paraTwo) * density * q / 4;
             } else if (shape == "9") {
-                answer = 3.14159 * paraThree * (paraOne * parOne - paraTwo * paraTwo) * density * q / 4;
+                answer = 3.14159 * paraThree * (paraOne * paraOne - paraTwo * paraTwo) * density * q / 4;
             } else if (shape == "10") {
-                answer = 3.14159 * paraThree * (2 * paraOne * parTwo - paraTwo * paraTwo) * density * q / 4;
+                answer = 3.14159 * paraThree * (2 * paraOne * paraTwo - paraTwo * paraTwo) * density * q / 4;
             }
             var element = document.getElementById("demo");
             element.classList.add("paddingafter");
