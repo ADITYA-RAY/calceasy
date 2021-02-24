@@ -207,6 +207,20 @@
             margin: 15px 0px 0px 0px;
 
         }
+        .change1{
+            display: table;
+        }
+        .change2{
+            display: none;
+        }
+        @media screen and (max-width:850px){
+            .change1{
+            display: none;
+        }
+        .change2{
+            display: table;
+        }
+        }
     </style>
 </head>
 
@@ -300,14 +314,70 @@
             </select>
         </p>
 
-        <table>
+        <table class="change1">
             <tr>
                 <td>Quantity</td>
                 <td><input type="number" id="quantity" autocomplete="off" value="1" min="1"></td>
+                <td></td>
+                <td rowspan="4" id="imgcontainer" ><img src="round.png"id="image" 
+                    style="border: 2px solid green; opacity: 0.7;border-radius: 12px;"></td>
             </tr>
             <tr>
                 <td id="rowOne">Diameter </td>
-                <td><input type="number" step="any" id="paraOneInput" autocomplete="off"min="1"></td>
+                <td ><input type="number" step="any" id="paraOneInput" autocomplete="off"min="1"></td>
+                <td>
+                    <select id="unitSelect1">
+                        <option id="1">mm</option>
+                        <option id="2">m</option>
+                        <option id="3">cm</option>
+                        <option id="4">ft</option>
+                        <option id="5">yd</option>
+                        <option id="6">in</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="rowTwo"></td>
+                <td><input type="number" step="any" id="paraTwoInput" autocomplete="off"min="1"></td>
+                <td>
+                    <select id="unitSelect2">
+                        <option id="1">mm</option>
+                        <option id="2">m</option>
+                        <option id="3">cm</option>
+                        <option id="4">ft</option>
+                        <option id="5">yd</option>
+                        <option id="6">in</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="rowThree">Length </td>
+                <td><input type="number" step="any" id="paraThreeInput" autocomplete="off"min="1"></td>
+                <td>
+                    <select id="unitSelect3">
+                        <option id="1">mm</option>
+                        <option id="2">m</option>
+                        <option id="3">cm</option>
+                        <option id="4">ft</option>
+                        <option id="5">yd</option>
+                        <option id="6">in</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table class="change2">
+            <tr>
+                <td colspan="3" id="imgcontainer" ><center><img src="round.png"id="image" 
+                    style="border: 2px solid green; opacity: 0.7;border-radius: 12px;align-items: center;"></center></td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td><input type="number" id="quantity" autocomplete="off" value="1" min="1"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="rowOne">Diameter </td>
+                <td ><input type="number" step="any" id="paraOneInput" autocomplete="off"min="1"></td>
                 <td>
                     <select id="unitSelect1">
                         <option id="1">mm</option>
@@ -475,51 +545,61 @@
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="round.jpg";
             }
             if (shapeValue == 2) {
                 document.getElementById("rowOne").innerHTML = "Width";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="square.jpg";
             }
             if (shapeValue == 3) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="rectangle.jpg";
             }
             if (shapeValue == 4) {
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="hexagonal.jpg";
             }
             if (shapeValue == 5) {
                 document.getElementById("rowOne").innerHTML = "Diameter";
                 document.getElementById("rowTwo").innerHTML = "";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="octagonal.jpg";
             }
             if (shapeValue == 6) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="sheet.jpg";
             }
             if (shapeValue == 7) {
                 document.getElementById("rowOne").innerHTML = "Thickness";
                 document.getElementById("rowTwo").innerHTML = "Width";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="plate.jpg";
             }
             if (shapeValue == 8) {
                 document.getElementById("rowOne").innerHTML = "Outer Diameter";
                 document.getElementById("rowTwo").innerHTML = "Wall";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="tubular.jpg";
             }
             if (shapeValue == 9) {
                 document.getElementById("rowOne").innerHTML = "Outer Diameter";
                 document.getElementById("rowTwo").innerHTML = "Inner Diameter";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="ring.jpg";
             }
             if (shapeValue == 10) {
                 document.getElementById("rowOne").innerHTML = "Outer Diameter";
                 document.getElementById("rowTwo").innerHTML = "Wall";
                 document.getElementById("rowThree").innerHTML = "Length";
+                document.getElementById("image").src="pipe.jpg";
             }
             return shapeValue;
         }
