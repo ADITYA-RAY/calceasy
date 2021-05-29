@@ -327,8 +327,8 @@
                     <option selected value="1">Round</option>
                     <option value="2">Square</option>
                     <option value="3">Rectangle</option>
-                    <option value="4">Hexagonal</option>
-                    <option value="5">Octagonal</option>
+                   <!--<option value="4">Hexagonal</option>
+                    <option value="5">Octagonal</option>--> 
                     <option value="6">Sheet</option>
                     <option value="7">Plate</option>
                     <option value="8">Tubular</option>
@@ -630,16 +630,18 @@
             answer = paraOne * paraOne * paraThree * density * q;
         } else if (shape == "3") {
             answer = paraOne * paraTwo * paraThree * density * q;
-        } else if (shape == "4") {
-            answer = paraOne * paraOne * paraThree * density * 2.5980762 * q;
-        } else if (shape == "5") {
-            answer = paraOne * paraOne * paraThree * density * 4.8284271248 * q;
-        } else if (shape == "6") {
+        } 
+        //else if (shape == "4") {
+            //answer = paraOne * paraOne * paraThree * density * 2.5980762 * q;
+        //} else if (shape == "5") {
+           // answer = paraOne * paraOne * paraThree * density * 4.8284271248 * q;
+      //  } 
+        else if (shape == "6") {
             answer = paraOne * paraTwo * paraThree * density * q;
         } else if (shape == "7") {
             answer = paraOne * paraTwo * paraThree * density * q;
         } else if (shape == "8") {
-            answer = 3.14159 * paraThree * ( paraOne * paraTwo - paraTwo * paraTwo) * density * q ;
+            answer = 3.14159 * paraThree * (2 * paraOne * paraTwo - paraTwo * paraTwo) * density * q / 4;
         } else if (shape == "9") {
             answer = 3.14159 * paraThree * (paraOne * paraOne - paraTwo * paraTwo) * density * q / 4;
         } else if (shape == "10") {
